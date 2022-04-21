@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script>
+   $(document).ready(function(){
+    $('#button').click(function () {
+        var url = $(this).attr("href");
+        $('body').animate({
+            "opacity": "0",
+            "top": "10px"
+        },500, function () {
+            document.location.href = 'inside2.html';
+        });
+        
+        return false;
+    });
+       "use strict";
+const content = "welcome."
+const text = document.querySelector(".text")
+let index = 0;
+
+ function sleep(delay){ 
+     const start = new Date().getTime(); 
+     while (new Date().getTime() < start + delay); 
+    }
+
+function typing(){
+    text.textContent += content[index++];
+    if(index > content.length){
+        text.textContent = ""
+        index = 0;
+        sleep(3000);
+    }
+}
+setInterval(typing, 200)
+///////////////////////
+
+
+
+
+   })
+  </script>
+  <style>
+
+   * { margin: 0; padding: 0; list-style: none; }
+   @font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+   
+   #inside{width: 1920px;height: 1000px;position: fixed;}
+   #logo{width: 200px;height: 180px;position: absolute;left: 130px;top:300px;}
+   #button{width: 120px;height: 60px;border: 5px solid rgb(68, 60, 46);
+    background-color: transparent;border-radius: 50px;position: absolute;left: 800px;top: 670px;
+    font-size: 35px;color: rgb(68, 60, 46);font-weight: 900;cursor: pointer;}
+    #button:hover {background-color: #fff;color:#000;}
+    #wel{}
+   #come{font-size: 50px;color: #fff;position: absolute;left: 110px;top: 450px; font-family: 'Cafe24Ssurround';}
+   .wel{font-size: 45px;color: black;position: absolute;left: 780px;top: 300px;font-family: 'Cafe24Ssurround';
+   display: inline; vertical-align: middle;
+ animation:  cursor 0.2s ease infinite;}
+ 
+  #box{width: 40px;height: 40px; background: url(1x/마우스\ 따라다니기.png)center no-repeat;background-size: cover;position: absolute;z-index: 105;}
+     #text1{position: absolute;left: 0;top: 0;bottom: 0;right: 0;display: none;}
+     #text2{position: absolute;left: 0;top: 0;bottom: 0;right: 0;display: none;}
+     .text{ display: inline; vertical-align: middle; animation:  cursor 0.2s ease infinite;
+position: absolute;left: 790px;top: 290px;font-size: 50px;}
+
+  </style>
+ </head>
+ <body>
+     
+     
+  <div id="wrap">
+      <img src="1x/INSIDE.png" alt="" id="inside">
+  </div>
+  <img src="1x/로고.png" alt="" id="logo">
+  <button id="button">click</button>
+  
+  <h1 id="come">어서오시개</h1>
+ 
+</div>
+ 
+ 
+  <div class="intro">
+    <h1 class="text"></h1>
+ </div>
+</div>
+ </body>
+</html>

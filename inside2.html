@@ -1,0 +1,729 @@
+
+<html lang="en">
+  <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="jquery-animate-css-rotate-scale.js"></script>
+   <script>
+    $(document).ready(function(){
+ 
+     $('#golden_tail').animate({'rotate':'-10deg'},222,function(){
+             $('#golden_tail').animate({'rotate':'0deg'},222)
+             $('#golden_tail').css({'transform':'rotateX(0deg)'})
+         })
+         setInterval(function(){
+           $('#golden_tail').animate({'rotate':'-10deg'},222,function(){
+             $('#golden_tail').animate({'rotate':'0deg'},222)
+             $('#golden_tail').css({'transform':'rotateX(0deg)'})
+         })
+         },1000)
+         $('#chihua_tail').animate({'rotate':'-20deg'},111,function(){
+             $('#chihua_tail').animate({'rotate':'0deg'},111)
+             $('#chihua_tail').css({'transform':'rotateX(0deg)'})
+         })
+         setInterval(function(){
+           $('#chihua_tail').animate({'rotate':'-20deg'},111,function(){
+             $('#chihua_tail').animate({'rotate':'0deg'},111)
+             $('#chihua_tail').css({'transform':'rotateX(0deg)'})
+         })
+         },999)
+  
+  
+  ///////////////////////////////////////
+  /////////////////////////////////   
+     $('#icon_sup').click(function(){ 
+       $('html,body').animate({scrollLeft : 360}, 400);
+ });
+ $('#icon_drink').click(function(){ 
+       $('html,body').animate({scrollLeft : 0}, 400);
+ });
+ $('#icon_intro').click(function(){ 
+       $('html,body').animate({scrollLeft : 1920}, 400);
+ });
+ $('#icon_cash').click(function(){ 
+       $('html,body').animate({scrollLeft : 3120}, 400);
+ });
+ $('#icon_come').click(function(){ 
+       $('html,body').animate({scrollLeft : 3840}, 400);
+ });
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     /////
+    
+     $('#menu1').animate({'top':'-300px'},444,function(){
+             $('#menu1').animate({'top':'-70px'},999)
+          
+ })
+    ///////////////////
+    menu2_age = 0;  menu3_age = 0; menu4_age = 0; menu5_age = 0; way_age=0; come_age=0; infor_age=0
+     $(window).scroll(function(){
+       scL = $(window).scrollLeft() 
+       $('#sc_text').text(scL)
+       if( scL >= 2640 ){ 
+         infor_age = infor_age + 1 // 0 1 2 3 4 5~
+         if(  infor_age == 1){
+             $('#information').animate({'opacity':1},444,)
+             $('#information>li').delay(300).animate({'opacity':1},444,)
+            
+          
+         }            
+       }
+       ////////////////////
+       if( scL >= 3840 ){ 
+         way_age =  way_age + 1 // 0 1 2 3 4 5~
+         if(  way_age == 1){
+             $('#way').animate({'opacity':1},444,)
+             $('#way2').animate({'opacity':1},444,)
+             $('#button1').animate({'opacity':1},444,)
+             $('#button2').animate({'opacity':1},444,)
+            
+          
+         }            
+       }
+       /////////////////
+       if( scL >= 3840 ){ 
+         come_age =  come_age + 1 // 0 1 2 3 4 5~
+         if(  come_age == 1){
+           $('#come_to_way>li').animate({'opacity':1},444,)
+           $('#come_to_way>li>p').animate({'top':'90px'},444)
+            
+         }            
+       }
+       ///////////
+       if( scL >= 240 ){ 
+         menu2_age =  menu2_age + 1 // 0 1 2 3 4 5~
+         if(  menu2_age == 1){
+             $('#menu2').animate({'top':'-300px'},444,function(){
+                 $('#menu2').animate({'top':'-70px'},999)               
+             })
+         }            
+       }
+       /////////////////
+       if( scL >= 1560 ){ 
+         menu3_age =  menu3_age + 1 // 0 1 2 3 4 5~
+         if(  menu3_age == 1){
+             $('#menu3').animate({'top':'-300px'},444,function(){
+                 $('#menu3').animate({'top':'-70px'},999)               
+             })
+         }            
+       }
+       //////////////////
+       if( scL >= 2750 ){ 
+         menu4_age =  menu4_age + 1 // 0 1 2 3 4 5~
+         if(  menu4_age == 1){
+             $('#menu4').animate({'top':'-300px'},444,function(){
+                 $('#menu4').animate({'top':'-110px'},999)               
+             })
+         }            
+       }
+ 
+       if( scL >= 3840 ){ 
+         menu5_age =  menu5_age + 1 // 0 1 2 3 4 5~
+         if(  menu5_age == 1){
+             $('#menu5').animate({'top':'-300px'},444,function(){
+                 $('#menu5').animate({'top':'-70px'},999)               
+             })
+         }            
+       }
+ })
+    ///////////////////////
+    
+    
+    
+    /////////////////////////////
+     $('body').on('mousewheel',function(e){
+ 
+ var wheelDelta = e.originalEvent.wheelDelta;
+ 
+ if(wheelDelta > 0){
+ 
+   console.log("up");
+ 
+   $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+ 
+ }else{
+ 
+ console.log("down");
+ 
+   $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+ 
+ }
+ 
+ })
+ 
+ $('#menubutton').click(function(){
+        $('#menubanner').show();
+    })
+    $('#menubutton').click(function(){
+        $('#menubutton_hide').show();
+        $('#menubutton').hide();
+    })
+    $('#menubutton_hide').click(function(){
+           $('#menubanner').hide();
+           $('#menubutton_hide').hide();
+           $('#menubutton').show();
+    })
+    $('#haru').click(function(){
+      $('#popup_haru').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_haru').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#puppy').click(function(){
+      $('#popup_puppy').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_puppy').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#friends').click(function(){
+      $('#popup_friends').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_friends').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#suje').click(function(){
+      $('#popup_suje').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_suje').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#yellow').click(function(){
+      $('#popup_yellow').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_yellow').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#red').click(function(){
+      $('#popup_red').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_red').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#mint').click(function(){
+      $('#popup_mint').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_mint').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#royal').click(function(){
+      $('#popup_royal').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_royal').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#small').click(function(){
+      $('#popup_small').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_small').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#real').click(function(){
+      $('#popup_real').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_real').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#real2').click(function(){
+      $('#popup_real2').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_real2').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#dool').click(function(){
+      $('#popup_dool').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_dool').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#dool2').click(function(){
+      $('#popup_dool2').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_dool2').hide()
+      $('#popup_button').hide()
+      
+    })
+    $('#kano').click(function(){
+      $('#popup_kano').show()
+      $('#popup_button').show()
+      
+    })
+    $('#popup_button').click(function(){
+       $('#popup_kano').hide()
+      $('#popup_button').hide()
+      
+    })
+    /////////////////////////////
+    $('#click').animate({'top':'575px'},777,function(){
+             $('#click').animate({'top':'570px'},777)
+         })
+         setInterval(function(){
+             $('#click').animate({'top':'575px'},777,function(){
+             $('#click').animate({'top':'570px'},777)
+         })
+         },2000)
+ //////////////////////
+ /////////////////////////////
+ $('#flower1').animate({'top':'75px'},777,function(){
+             $('#flower1').animate({'top':'70px'},777)
+         })
+         setInterval(function(){
+             $('#flower1').animate({'top':'75px'},777,function(){
+             $('#flower1').animate({'top':'70px'},777)
+         })
+         },2000)
+ ///////////////////
+         auto=0;
+         $('#left').click(function(){
+     auto = auto + 100;
+     if( auto > 0 ){ auto = -800; }
+     $('#tab_box').animate({'left':auto+'%'},600);
+ });
+ $('#right').click(function(){
+     auto = auto - 100;
+     if( auto <= -900 ){ auto = 0; }
+     $('#tab_box').animate({'left':auto+'%'},600);
+ });
+ 
+ ////////////////////
+ $('#button1').click(function(){
+   $('#way').show();
+   $('#way2').hide();
+ })
+ $('#button2').click(function(){
+   $('#way').hide();
+   $('#way2').show();
+ })
+ $('#corgi').click(function(){
+   $('#tab_box').css({'left':'0'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_button').show();
+ })
+ $('#tab_button').click(function(){
+   $('#tab').hide();
+   $('#tab_small').hide();
+   $('#tab_box').hide();
+   $('#right').hide();
+   $('#left').hide();
+   $('#tab_button').hide();
+ })
+ $('#golden').click(function(){
+   $('#tab_box').css({'left':'-100%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#dobe').click(function(){
+   $('#tab_box').css({'left':'-200%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#chihua').click(function(){
+   $('#tab_box').css({'left':'-300%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ 
+ $('#ter').click(function(){
+   $('#tab_box').css({'left':'-400%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#minipin').click(function(){
+   $('#tab_box').css({'left':'-500%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#lu').click(function(){
+   $('#tab_box').css({'left':'-600%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#pug').click(function(){
+   $('#tab_box').css({'left':'-700%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ $('#bul').click(function(){
+   $('#tab_box').css({'left':'-800%'},600);
+   $('#tab').show();
+   $('#tab_small').show();
+   $('#tab_box').show();
+   $('#right').show();
+   $('#left').show();
+   $('#tab_box>li:nth-child(2)').show();
+   $('#tab_button').show();
+ })
+ ///////////////////////
+ $('#button1').click(function(){
+    $('#way').show();
+   $('#way2').hide();
+   $('#come_to_way>li').show();
+ });
+ 
+ $('#button2').click(function(){
+   $('#way2').show();
+    $('#way').hide();
+    $('#come_to_way>li').hide();
+ });
+    
+ }) //마지막괄호
+ 
+   </script>
+   <style>
+        * { margin: 0; padding: 0; list-style: none; }
+    @font-face {
+     font-family: 'Cafe24Ssurround';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+ @font-face {
+     font-family: 'NanumBarunpen';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+    #main {width: 5760px;height: 950px;position:relative ;z-index: 100;}
+    #menu-icon1{width: 400px;height: 300px; position: absolute;left: 0px;top: -30px;z-index: 101;}
+    #menu{width: 353px;height: 270px;position: absolute;left: 350px;top: -30px;z-index: 101;}
+    #menubutton{width: 90px;height: 40px;position: absolute;left: 475px;top: 125px;border-radius: 30px;
+     background-color: transparent;border: 4px solid #fff;z-index:102 ;font-size: 20px;color: #fff;}
+     #menubutton_hide{width: 90px;height: 40px;position: absolute;left: 475px;top: 125px;border-radius: 30px;
+     background-color: transparent;border: 4px solid #fff;z-index:102 ;font-size: 20px;color: #fff;display: none;}
+     #menubanner{width: 600px;height: 600px; position: absolute;z-index: 102;left: 100px;top: 150px;display: none;}
+     
+     #haru{width: 100px;height: 110px;position: absolute;left:970px;top: 170px;z-index: 102;}
+     #haru:hover{margin-top: -15px;transform: rotate(5deg);}
+     #puppy{width: 110px;height: 120px;position: absolute;left: 1100px;top: 170px;z-index: 102;}
+     #puppy:hover{margin-top: -15px;transform: rotate(5deg);}
+     #friends{width: 130px;height: 120px;position: absolute;left: 1290px;top: 180px;z-index: 102;}
+     #friends:hover{margin-top: -15px;transform: rotate(5deg);}
+     #suje{width: 110px;height: 110px;position: absolute;left: 1440px;top: 170px;z-index: 102;}
+     #suje:hover{margin-top: -15px;transform: rotate(5deg);}
+     #yellow{width: 85px;height: 90px;position: absolute;left: 940px;top: 380px;z-index: 102;}
+     #yellow:hover{margin-top: -15px;transform: rotate(5deg);}
+     #mint{width: 90px;height: 90px;position: absolute;left: 1040px;top: 380px;z-index: 102;}
+     #mint:hover{margin-top: -15px;transform: rotate(5deg);}
+     #red{width: 90px;height: 90px;position: absolute;left: 1145px;top: 380px;z-index: 102;}
+     #red:hover{margin-top: -15px;transform: rotate(5deg);}
+     #royal{width: 110px;height: 120px;position: absolute;left: 1420px;top: 340px;z-index: 102;}
+     #royal:hover{margin-top: -15px;transform: rotate(5deg);}
+     #small{width: 110px;height: 120px;position: absolute;left: 1300px;top: 340px;z-index: 102;}
+     #small:hover{margin-top: -15px;transform: rotate(5deg);}
+     #real{width: 100px;height: 110px;position: absolute;left: 970px;top: 520px;z-index: 102;}
+     #real:hover{margin-top: -15px;transform: rotate(5deg);}
+     #real2{width: 100px;height: 110px;position: absolute;left: 1100px;top: 520px;z-index: 102;}
+     #real2:hover{margin-top: -15px;transform: rotate(5deg);}
+     #dool{width: 90px;height: 90px;position: absolute;left: 1290px;top: 570px;z-index: 102;}
+     #dool:hover{margin-top: -15px;transform: rotate(5deg);}
+     #dool2{width: 90px;height: 90px;position: absolute;left: 1370px;top: 560px;z-index: 102;}
+     #dool2:hover{margin-top: -15px;transform: rotate(5deg);}
+     #kano{width: 90px;height: 100px;position: absolute;left: 1455px;top: 545px;z-index: 102;}
+     #kano:hover{margin-top: -15px;transform: rotate(5deg);}
+    #popup_haru{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+     #popup_button{width: 80px;height: 30px;position: absolute;left: 1660px;top: 560px;z-index: 106;display: none;
+       border: 3px solid #fff;font-size: 20px;background-color: transparent;border-radius: 30px;color: #fff;}
+      #popup_puppy{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_friends{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_suje{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_yellow{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_red{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_mint{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_royal{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_small{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_real{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_real2{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+      #popup_kano{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+     #popup_dool{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+     #popup_dool2{width: 300px;height:470px;position: absolute;left: 1550px;top:150px;z-index: 105;display: none;}
+     #menu2{width: 200px;height: 300px;position: absolute;left: 1160px;top: -300px;z-index: 106;}
+      #corgi{width: 150px;height: 160px;position: absolute;left: 2400px;top: 670px;z-index: 102;}
+      #click{width:110px;height: 110px;position: absolute;left: 2490px;top: 570px;z-index: 103;}
+     #dobe{width: 170px;height: 230px;position: absolute;left: 2860px;top: 500px;z-index: 102;}
+     #chihua{width: 110px;height: 110px;position: absolute;left: 2780px;top: 480px;z-index: 102;}
+     #chihua_tail{width: 80px;height: 80px;position: absolute;left: 2838px;top: 530px;z-index: 103;}
+     #golden{width: 230px;height: 240px;position: absolute;left: 2600px;top: 590px;z-index: 103;}
+     #golden_tail{width: 100px;height: 100px;position: absolute;left: 2790px;top: 650px;z-index: 102;transform: rotate(5deg);}
+     #pug{width: 130px;height: 130px;position: absolute;left: 3000px;top: 600px;z-index: 102;}
+     #ter{width: 170px;height: 170px;position: absolute;left: 1980px;top: 700px;z-index: 102;}
+     #minipin{width: 130px;height: 130px;position: absolute;left: 2300px;top: 800px;z-index: 102;}
+     #bul{width: 170px;height: 170px;position: absolute;left: 3400px;top: 600px;z-index: 102;}
+     #lu{width: 170px;height: 170px;position: absolute;left: 3000px;top: 730px;z-index: 102;}
+     #intro{width: 500px;height: 400px;position: absolute;left: 2580px;top: 250px;z-index: 104;display: none;}
+     #golden_intro{width: 400px;height: 300px;position: absolute;left: 2625px;top: 304px;z-index: 105;display: none;}
+     #menu3{width: 200px;height: 300px;position: absolute;left: 2700px;top: -300px;z-index: 106;}
+     #tab_button{width: 80px;height: 30px;position: absolute;left: 2790px;top: 650px;z-index: 108;display: none;
+       border: 3px solid #fff;font-size: 20px;background-color: transparent;border-radius: 30px;color: #fff;}
+     #tab {width: 600px;height: 500px;position: absolute;left: 2545px;top: 215px;z-index: 106;display: none;}
+     #tab_small{width: 490px;height: 280px;background-color: aqua;position: absolute;z-index: 107;left: 2590px;top: 330px;overflow: hidden;display: none;}
+     #tab_box{width: 4500px;height: 280px;background-color: #fff;position: absolute;z-index: 108;display: none;}
+     #tab_box>li{width: 490px;height: 280px;background-color: blueviolet;float: left;}
+     #tab_box>li:nth-child(1){background: url(1x/25-2.png)center no-repeat;background-size:490px 380px;margin-top: 4px;}
+     #tab_box>li:nth-child(2){background: url(1x/25-1.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(3){background: url(1x/25-3.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(4){background: url(1x/25-4.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(5){background: url(1x/25-5.png)center no-repeat;background-size:495px 390px;margin-top:12px;}
+     #tab_box>li:nth-child(6){background: url(1x/25-6.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(7){background: url(1x/25-7.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(8){background: url(1x/25-8.png)center no-repeat;background-size:490px 380px;}
+     #tab_box>li:nth-child(9){background: url(1x/25-9.png)center no-repeat;background-size:490px 380px;}
+     #right{width: 70px;height: 70px;position: absolute;left: 3160px;top: 430px;z-index: 107;display: none;}
+     #left{width: 70px;height: 70px;position: absolute;left: 2460px;top: 430px;z-index: 107;display: none;}
+     #information{width: 700px;height: 700px;position: absolute;left: 3670px;top: 70px;z-index: 107; background: url(1x/infor.png) center no-repeat;opacity: 0;}    
+     #information>li{width: 200px;height: 200px;margin: 14px;float: left;z-index: 109;margin-top: 375px;opacity: 0;}
+     #information>li:nth-child(1){margin-left:20px;}
+     #information>li:nth-child(1){margin-right:20px;}
+     #information>li>h2{text-align: center; font-family: 'Cafe24Ssurround';color: rgb(119, 110, 86);font-size: 15px;}
+     #information>li>p{text-align: center;font-size: 11px;font-family: 'NanumBarunpen';font-weight: 700;margin-top: 10px;}
+     #menu4{width: 210px;height: 380px;position: absolute;left: 3900px;top: -300px;z-index: 107;}
+     #way{width: 600px;height: 600px;position: absolute;left:4800px; top: 150px;z-index: 108;opacity: 0;}
+     #way2{width: 600px;height: 600px;position: absolute;left: 4800px;top: 150px;z-index: 107;display: none;}
+     #button1{width: 78px;height: 100px;position: absolute;left: 5392px;top: 300px;z-index: 106;opacity: 0;background: url(1x/come1.png)center no-repeat;background-size: cover;cursor: pointer; z-index: 9999999;}
+     #button2{width: 80px;height: 100px;position: absolute;left: 5392px;top: 380px;z-index: 106;opacity: 0;background: url(1x/come2.png)center no-repeat;background-size: cover;cursor: pointer; z-index: 999999;}
+     #menu5{width: 200px;height: 300px;position: absolute;left:5000px;top: -300px;z-index: 106;}
+     #icon{width: 460px; height: 130px; position: fixed; right: 0; margin: auto; left: 0;  font-size: 55px; color: #fff;  z-index: 99999; bottom: 0;}
+     #icon_drink{width: 100px;height: 100px;position:absolute;left: 0;top: 0;z-index: 9999;}
+     #icon_sup{width: 100px;height: 100px;position: absolute;left: 70px;top: 10px;z-index: 107;}
+     #icon_intro{width: 100px;height: 100px;position: absolute;left: 155px;top: 10;z-index: 107;}
+     #icon_cash{width: 100px;height: 100px;position: absolute;left:240px;top: 10px;z-index: 107;}
+     #icon_come{width: 100px;height: 100px;position: absolute;left: 320px;top: 10px;z-index: 107;}
+     #cam{width: 80px;height: 80px;position: absolute;left: 2900px;top: -20px;z-index: 107;}
+     #cam2{width: 160px;height: 160px;position: absolute;left: 2940px;top: -20px;z-index: 107;}
+     #sc_text { font-size: 100px; background-color: #000; color: yellow; position: fixed; left: 0; top: 0; z-index: 99999;display: none;}
+    #come_to_way{width: 700px;height: 700px;position: absolute; left: 4800px;top: 100px;z-index: 99999;} 
+    #come_to_way>li{width: 190px;height: 190px;float: left;text-align: center;margin-top: 300px;opacity: 0;}
+    #come_to_way>li:nth-child(1){margin-left: 15px;}
+    #come_to_way>li:nth-child(2){display: inline-block;margin-top: 330px;}
+    #come_to_way>li:nth-child(3){margin-left: -5px;}
+    #come_to_way>li>h2{font-size: 20px;font-family: 'Cafe24Ssurround';color: rgb(119, 110, 86);}
+    #come_to_way>li>p{font-size: 13px;font-family: 'NanumBarunpen';font-weight: 600;}
+    #flower1{width: 80px;height: 80px;position: absolute;z-index: 107;left: 570px;top: 80px;}
+  
+   </style>
+  </head>
+  <body>
+   <img src="1x/main.png" alt="" id="main">
+   <img src="1x/17.png" alt="" id="menu-icon1">
+   <img src="1x/16.png" alt="" id="menu">
+   <img src="1x/15.png" alt="" id="menubanner">
+   <button id="menubutton">click</button>
+   <button id="menubutton_hide">hide</button>
+  
+   <img src="1x/1.png" alt="" id="haru">
+   <img src="1x/3.png" alt="" id="puppy">
+   <img src="1x/9.png" alt="" id="friends">
+   <img src="1x/12.png" alt="" id="suje">
+   <img src="1x/5.png" alt="" id="yellow">
+   <img src="1x/6.png" alt="" id="mint">
+   <img src="1x/7.png" alt="" id="red">
+   <img src="1x/11.png" alt="" id="royal">
+   <img src="1x/8.png" alt="" id="small">
+   <img src="1x/2.png" alt="" id="real">
+   <img src="1x/4.png" alt="" id="real2">
+   <img src="1x/14.png" alt="" id="dool">
+   <img src="1x/13.png" alt="" id="dool2">
+   <img src="1x/10.png" alt="" id="kano">
+   <img src="1x/24-14.png" alt="" id="popup_haru">
+   <img src="1x/24-11.png" alt="" id="popup_puppy">
+   <img src="1x/24-5.png" alt="" id="popup_friends">
+   <img src="1x/24-13.png" alt="" id="popup_suje">
+   <img src="1x/24-4.png" alt="" id="popup_yellow">
+   <img src="1x/24-3.png" alt="" id="popup_red">
+   <img src="1x/24-2.png" alt="" id="popup_mint">
+   <img src="1x/24-1.png" alt="" id="popup_royal">
+   <img src="1x/24-6.png" alt="" id="popup_small">
+   <img src="1x/24-12.png" alt="" id="popup_real">
+   <img src="1x/24-10.png" alt="" id="popup_real2">
+   <img src="1x/24-8.png" alt="" id="popup_dool">
+   <img src="1x/24-9.png" alt="" id="popup_dool2">
+   <img src="1x/24-7.png" alt="" id="popup_kano">
+   <button id="popup_button">close</button>
+   <img src="1x/a.png" alt="" id="menu2">
+   
+   <img src="1x/wel.png" alt="" id="corgi">
+   
+   <img src="1x/pointer.png" alt="" id="click">
+   <img src="1x/do.png" alt="" id="dobe">
+   <img src="1x/chi.png" alt="" id="chihua">
+   <img src="1x/chi1.png" alt="" id="chihua_tail">
+   <img src="1x/golden.png" alt="" id="golden">
+   <img src="1x/golden1.png" alt="" id="golden_tail">
+   <img src="1x/pug.png" alt="" id="pug">
+   <img src="1x/ter.png" alt="" id="ter">
+   <img src="1x/mini.png" alt="" id="minipin">
+   <img src="1x/bul.png" alt="" id="bul">
+   <img src="1x/lu.png" alt="" id="lu">
+   <img src="1x/25.png" alt="" id="intro">
+   <img src="1x/25-1.png" alt="" id="golden_intro">
+   <img src="1x/e.png" alt="" id="menu3">
+   <button id="tab_button">close</button>
+    <img src="1x/25.png" alt="" id="tab">
+   <div id="tab_small">
+    <div id="tab_box">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+     
+   
+ </div>
+ </div>
+ <img src="1x/right.png" alt="" id="right">
+ <img src="1x/left.png" alt="" id="left">
+   </div>
+   <ul id="information">
+ <li><h2>이용안내</h2>
+ <p>배설물은 견주님이 직접 <br>
+   치워 주세요<br> 13세 이하의 어린이 동반 
+   입장이 불가한 노키즈존입니다.  <br>  어서오시개  입장과 동시에 <br>
+   반려견에 대한 관리 책임은<br>
+   본인에게 있습니다.
+   </p></li>
+ <li> <h2>이용요금</h2>
+   <p>음료추가 1잔 3,000원<br> 애견추가 1견 3,000원<br>1인1견 음료포함11,000원<br>이용요금은 선불입니다.</p></li>
+ <li><h2>출입기준제한</h2>
+ <p>접종이 안된 애견 <br>
+   발정시기 애견 <br>
+   생리 중인 애견 <br>
+ 생리 중인 애견<br>
+ 전염병 질병 보유 애견 <br>
+ 입질이 있는 애견 <br>
+ 공격성이 강한 애견</p></li> 
+ 
+ </ul>
+  
+   
+  
+  
+ </div>
+ <img src="1x/c.png" alt="" id="menu4">
+ <img src="1x/guide.png" alt="" id="way">
+ <img src="1x/come.png" alt="" id="way2">
+ <div id="button1"></div>
+ <divz id="button2"></divz>
+ <img src="1x/d.png" alt="" id="menu5">
+ <div id="icon">
+ <img src="1x/22.png" alt="" id="icon_drink">
+ <img src="1x/21.png" alt="" id="icon_sup">
+ <img src="1x/20.png" alt="" id="icon_intro">
+ <img src="1x/19.png" alt="" id="icon_cash">
+ <img src="1x/18.png" alt="" id="icon_come">
+</div>
+ <img src="1x/23.png" alt="" id="cam">
+ <img src="1x/23.png" alt="" id="cam2">
+ <ul id="come_to_way">
+   <li> <h2>어서오시개</h2>
+     <p>민락로 211 
+       그랜드 프라자 204호 <br> 주말 공휴일 AM 10:00~PM 11:00 <br> 평일 AM 9:00~PM 11:00 <br> 010-2370-4865</p>
+   </li>
+   <li> <h2>주변 버스 정류장</h2>
+     <p>송산초교 206,10-1 <br> 그린 APT 11,23,10-2 <br> 산들마을 2단지 11</p></li>
+   <li> <h2>주차안내</h2>
+     <p>유료-공영주차타워 <br> 무료-공영주차장</p></li>
+ </ul>
+ <h1 id="sc_text">0</h1>
+ <img src="1x/flower.png" alt="" id="flower1">
+ 
+  </body>
+ </html>
